@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Kevin Brown — writer-led creative director, copywriter and director.">
+<title>Kevin Brown — Ideas with a Backbone</title>
+<style>
+:root{--ink:#0b0b0b;--paper:#f4f1eb;--orange:#ff4d24;--amber:#ffb000;--muted:#aaa;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:#fff;font-family:Arial,Helvetica,sans-serif}
+a{color:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.eyebrow{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;font-weight:800}
+nav{position:fixed;z-index:20;inset:0 0 auto;background:rgba(11,11,11,.82);backdrop-filter:blur(14px);border-bottom:1px solid #242424}
+nav .wrap{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:-.04em;font-size:1.2rem;text-decoration:none}
+.links{display:flex;gap:24px;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em}.links a{text-decoration:none;color:#bbb}.links a:hover{color:#fff}
+.hero{min-height:100svh;padding:145px 0 80px;display:grid;align-items:end;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:760px;height:760px;border-radius:50%;right:-180px;top:-170px;background:radial-gradient(circle at 35% 35%,var(--amber),var(--orange) 52%,transparent 53%);opacity:.95}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:end}
+h1{font-size:clamp(4.5rem,11vw,10rem);line-height:.82;letter-spacing:-.075em;margin:18px 0 34px;max-width:900px}
+.hero-copy{font-size:clamp(1.15rem,2vw,1.55rem);line-height:1.45;color:#d0d0d0;max-width:650px}
+.hero-side{border-left:1px solid #3b3b3b;padding-left:28px}.hero-side p{font-size:1.05rem;line-height:1.6;color:#c4c4c4}
+.btn{display:inline-flex;margin-top:28px;padding:15px 20px;border:1px solid #fff;text-decoration:none;text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:900;transition:.2s}.btn:hover{background:#fff;color:#111}
+.marquee{overflow:hidden;border-top:1px solid #222;border-bottom:1px solid #222;padding:17px 0;white-space:nowrap;color:#8d8d8d;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+section{padding:110px 0}.light{background:var(--paper);color:#111}.section-head{display:grid;grid-template-columns:.6fr 1.4fr;gap:60px;margin-bottom:60px}
+.section-head h2{font-size:clamp(2.7rem,5vw,5.3rem);line-height:.92;letter-spacing:-.055em;margin:0}.section-head p{font-size:1.18rem;line-height:1.65;margin:0;max-width:700px}
+.feature{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.feature img{width:100%;display:block;box-shadow:0 26px 70px rgba(0,0,0,.25)}.feature h3{font-size:clamp(2.5rem,5vw,5rem);line-height:.92;letter-spacing:-.055em;margin:12px 0 22px}.feature p{font-size:1.08rem;line-height:1.7;color:#444}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}.meta div{border-top:1px solid #aaa;padding-top:12px}.meta b{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}.meta span{font-size:.95rem}
+.copy-card{margin-top:70px;background:#111;color:#fff;padding:clamp(32px,6vw,78px);display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}.copy-card blockquote{font-size:clamp(2.2rem,5vw,5.2rem);line-height:1;letter-spacing:-.055em;margin:0}.copy-card p{color:#bbb;line-height:1.7}
+.frames{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.frames img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#333}.step{background:#111;padding:36px 28px;min-height:260px}.step span{color:var(--orange);font-weight:900}.step h3{font-size:1.55rem;margin:50px 0 15px}.step p{color:#aaa;line-height:1.55}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.portrait{min-height:650px;background:url('https://static.wixstatic.com/media/691427_0a50cafcb1484973bd09b2faf7aab87a~mv2.png/v1/fill/w_706,h_1059,al_c,q_90,enc_avif,quality_auto/691427_0a50cafcb1484973bd09b2faf7aab87a~mv2.png') center/cover}
+.about h2{font-size:clamp(3rem,6vw,6rem);line-height:.9;letter-spacing:-.06em;margin:15px 0 30px}.about p{font-size:1.15rem;line-height:1.75;color:#ccc}
+footer{padding:90px 0 35px;background:var(--orange);color:#111}footer h2{font-size:clamp(3.4rem,8vw,8.2rem);line-height:.85;letter-spacing:-.07em;margin:12px 0 35px}footer a{font-weight:900;font-size:1.2rem}.footline{display:flex;justify-content:space-between;margin-top:80px;border-top:1px solid rgba(0,0,0,.35);padding-top:20px;font-size:.75rem;text-transform:uppercase;letter-spacing:.12em}
+.reveal{opacity:0;transform:translateY(28px);transition:.7s ease}.reveal.in{opacity:1;transform:none}
+@media(max-width:800px){.links{display:none}.hero-grid,.section-head,.feature,.copy-card,.about{grid-template-columns:1fr}.hero-side{border-left:0;border-top:1px solid #333;padding:28px 0 0}.frames{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.feature{gap:30px}.portrait{min-height:500px}section{padding:75px 0}}
+@media(max-width:500px){.process{grid-template-columns:1fr}.wrap{width:min(var(--max),calc(100% - 28px))}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="#top">KEVIN BROWN</a><div class="links"><a href="#work">Work</a><a href="#copy">Copy</a><a href="#process">Process</a><a href="#about">About</a></div></div></nav>
+
+<header class="hero" id="top"><div class="wrap hero-grid">
+<div><div class="eyebrow">Creative Director • Writer • Director</div><h1>Ideas with a backbone.</h1><p class="hero-copy">Campaign work built from strategy to script to screen—and presented with the thinking, language and craft that made it work.</p><a class="btn" href="#work">Explore the work</a></div>
+<div class="hero-side"><div class="eyebrow">Writer-led creative</div><p>Strong brands do not happen by accident. Every word should earn its keep. Every idea should have a reason to exist.</p></div>
+</div></header>
+
+<div class="marquee">Strategy&nbsp;&nbsp;•&nbsp;&nbsp;Campaign Concepting&nbsp;&nbsp;•&nbsp;&nbsp;Copywriting&nbsp;&nbsp;•&nbsp;&nbsp;Direction&nbsp;&nbsp;•&nbsp;&nbsp;Production&nbsp;&nbsp;•&nbsp;&nbsp;Brand Storytelling&nbsp;&nbsp;•&nbsp;&nbsp;</div>
+
+<section class="light" id="work"><div class="wrap">
+<div class="section-head reveal"><div class="eyebrow">Featured campaign</div><div><h2>Show the idea—not only the finished spot.</h2><p>This case-study structure gives Kevin room to explain the challenge, strategic insight, central concept, copy, execution and outcome. The language below is intentionally marked as sample copy until Kevin supplies the campaign facts.</p></div></div>
+
+<div class="feature reveal">
+<img src="assets/strategy-frame.svg" alt="Concept art for a campaign strategy section">
+<div><div class="eyebrow">Let’s Go To Work</div><h3>A line built to move.</h3><p><strong>Sample positioning:</strong> Rather than treating the commercial as an isolated video, the page frames the campaign as a rallying cry that could work across television, social, digital, retail and internal culture.</p>
+<div class="meta"><div><b>Role</b><span>Creative direction, concept, copy, script, direction</span></div><div><b>Deliverables</b><span>TV, digital, social, retail, campaign language</span></div></div></div>
+</div>
+
+<div class="copy-card reveal" id="copy"><div><div class="eyebrow">Copy spotlight</div><p>Pulling the strongest line out of the video lets visitors experience Kevin as a writer immediately—even with the sound off.</p></div><blockquote>“Don’t just show up. Show what you’re made of.”</blockquote></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="section-head reveal"><div class="eyebrow">Campaign ecosystem</div><div><h2>One idea. Multiple expressions.</h2><p>The page can pair real campaign stills with specially designed editorial frames so the portfolio feels like a complete campaign presentation instead of a stack of video players.</p></div></div>
+<div class="frames reveal"><img src="assets/copy-frame.svg" alt="Editorial copy frame"><img src="assets/system-frame.svg" alt="Campaign system frame"><img src="https://static.wixstatic.com/media/691427_9beee082c5de4cb0a06218d885626714~mv2.png/v1/fill/w_980,h_612,al_c,q_90,enc_avif,quality_auto/691427_9beee082c5de4cb0a06218d885626714~mv2.png" alt="Race car campaign still from Kevin Brown's existing website"></div>
+</div></section>
+
+<section class="light" id="process"><div class="wrap">
+<div class="section-head reveal"><div class="eyebrow">Creative breakdown</div><div><h2>Make the thinking easy to scan.</h2><p>Each campaign can use the same four-part story. That consistency helps recruiters and prospective clients understand Kevin’s contribution quickly.</p></div></div>
+<div class="process reveal">
+<div class="step"><span>01</span><h3>The challenge</h3><p>What business or audience problem did the work need to solve?</p></div>
+<div class="step"><span>02</span><h3>The insight</h3><p>What human truth, tension or opportunity unlocked the direction?</p></div>
+<div class="step"><span>03</span><h3>The idea</h3><p>What single organizing thought held the campaign together?</p></div>
+<div class="step"><span>04</span><h3>The impact</h3><p>What changed: attention, engagement, sales, expansion, recognition or renewal?</p></div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap about reveal">
+<div class="portrait" role="img" aria-label="Portrait of Kevin Brown"></div>
+<div><div class="eyebrow">About Kevin</div><h2>At his core, a writer.</h2><p>Kevin is a writer-led creative director, copywriter and director with experience spanning campaign concepting, brand storytelling, scriptwriting, production and direction across television, digital, retail, sports and branded content.</p><p>The opportunity for the portfolio is not to add more noise. It is to expose more of the thinking already inside the work.</p><a class="btn" href="mailto:kevinrbrowncreative@gmail.com">Start a conversation</a></div>
+</div></section>
+
+<footer><div class="wrap"><div class="eyebrow">Have a problem worth solving?</div><h2>Let’s create something worth remembering.</h2><a href="mailto:kevinrbrowncreative@gmail.com">kevinrbrowncreative@gmail.com</a><div class="footline"><span>Kevin Brown Creative</span><span>Concept landing page • 2026</span></div></div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body></html>
