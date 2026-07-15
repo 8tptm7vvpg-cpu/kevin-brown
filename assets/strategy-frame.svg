@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff4d24"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="#0b0b0b"/>
+<circle cx="1180" cy="180" r="360" fill="url(#g)" opacity=".9"/>
+<path d="M0 760L650 320l950 680H0z" fill="#171717"/>
+<text x="110" y="150" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="700" letter-spacing="8">THE STRATEGY</text>
+<text x="110" y="285" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="108" font-weight="900">Make work</text>
+<text x="110" y="400" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="108" font-weight="900">feel like a</text>
+<text x="110" y="515" fill="url(#g)" font-family="Arial,Helvetica,sans-serif" font-size="108" font-weight="900">rallying cry.</text>
+<text x="115" y="890" fill="#a8a8a8" font-family="Arial,Helvetica,sans-serif" font-size="28">CONCEPT ART • REPLACE WITH CAMPAIGN STILL WHEN READY</text>
+</svg>
